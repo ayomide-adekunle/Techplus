@@ -1,0 +1,132 @@
+<!--View Information-->
+<!--View name : Menu Dashboard-->
+<!--Controller name : menuDashboardCtrl-->
+<!--Controller path : www/templates/themes/menu-dashboard/js/controllers.js-->
+<!--State name : app.menuDashboard-->
+<!--URL : #app/menuDashboard-->
+
+<ion-view title="Dashboard">
+    <!--menu dashboard section-->
+    <ion-content id="menu-dashboard-content">
+        <!--panel section-->
+        <div class="menu-panel">
+            <div class="row">
+                <div class="col-33" ng-click="navigateTo('app.hackaton')">
+                    <i class="ion-code-working" style="color:#D31A0F"></i>
+
+                    <p>Hackathon</p>
+                </div>
+                <div class="col-33" ng-click="Reglink('http://techplus.com.ng/agenda-2/')">
+                    <i class="ion-clipboard" style="color:#D31A0F"></i>
+
+                    <p>Agenda</p>
+                </div>
+                <div class="col-33" ng-click="showToast('Camera')">
+                    <i class="ion-speakerphone" style="color:#D31A0F"></i>
+
+                    <p>News</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-33" ng-click="navigateTo('app.conference')">
+                    <i class="ion-ios-people" style="color:#D31A0F"></i>
+
+                    <p>Conference</p>
+                </div>
+                <div class="col-33" ng-click="navigateTo('app.registration')">
+                    <i class="ion-person-add" style="color:#D31A0F"></i>
+
+                    <p>Register</p>
+                </div>
+                <div class="col-33" ng-click="navigateTo('app.exhibition')">
+                    <i class="fa fa-users" style="color:#D31A0F"></i>
+
+                    <p>Exhibition</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-33" ng-click="navigateTo('app.about-us')">
+                    <i class="ion-information-circled" style="color:#D31A0F" ></i>
+
+                    <p>About</p>
+                </div>
+                <div class="col-33" ng-click="navigateTo('app.events')">
+                    <i class="ion-calendar" style="color:#D31A0F"></i>
+
+                    <p>Events</p>
+                </div>
+                <div class="col-33" ng-click="navigateTo('app.contractUs')">
+                    <i class="ion-filing" style="color:#D31A0F"></i>
+
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div><!--end panel section-->
+
+        <!--panel footer section-->
+        <div class="menu-dashboard-footer">
+           
+           <!--  <md-whiteframe class="md-whiteframe-z1" layout ng-click="key_speakers()"> -->
+           
+            <!-- <md-whiteframe class="md-whiteframe-z1" layout ng-click="navigateTo('app.speakers-page')"> -->
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="speakers()">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-person-stalker" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-80">
+                       Speakers
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="showVideo()">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-social-youtube" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-80">
+                        Tech Plus 2016 Video
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="Reglink('http://techplus.com.ng/new/techplus-summary/')">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-document-text" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-80">
+                        Tech Plus 2015 Summary
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="navigateTo('app.notelist')">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-compose" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-80">
+                        Notebook
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+        </div><!--end panel footer section-->
+    </ion-content><!--Menu dashboard section-->
+</ion-view>

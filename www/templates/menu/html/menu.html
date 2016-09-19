@@ -1,0 +1,326 @@
+<!--View Information-->
+<!--View name : Menu-->
+<!--Controller name : menuCtrl-->
+<!--Controller path : www/templates/menu/js/controllers.js-->
+<!--State name : app-->
+<!--URL : #app-->
+
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-balanced  material-background-nav-bar">
+            <ion-nav-buttons side="left">
+                <a class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-click="toggleLeft()"></a>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <!--menu section-->
+        <div class="material-background" id="toggle-menu-left-header">
+            <!--menu header section-->
+            <div class="menu-left-header">
+                <img class="user-img" src="img/logo.png">
+
+                <p>
+                    <span class="title">TechPlus</span>
+                    <br/>
+                    <span class="sub-title">The LARGEST Technology gathering in Nigeria</span>
+                </p>
+            </div><!--end menu header section-->
+        </div> <!--menu content section-->
+        <ion-content id="toggle-menu-left-content" scroll="true">
+
+            <!--If device is android application will present below code.-->
+            <!--It will disable animation to better performance on android.-->
+            <!--list section-->
+            <div ng-if="isAndroid" class="menu-list">
+
+                <md-subheader menu-toggle="left" class="md-warn" ng-click="navigateTo('app.tryAppNoBackBtn')">Home</md-subheader>
+                <md-subheader menu-toggle="left" class="md-warn" ng-click="navigateTo('app.menuDashboard')">Dashboard</md-subheader>
+                <md-subheader menu-toggle="left" class="md-warn" ng-click="navigateTo('app.about-us')">About</md-subheader>
+                <md-subheader menu-toggle="left" class="md-warn" ng-click="navigateTo('app.contractUs')">Contact</md-subheader>
+
+                <md-subheader menu-toggle="left" class="md-warn" ng-click="navigateTo('app.registration')" >Registration</md-subheader>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo_menu('app.signUp',1)">
+                    <div class="col-33">
+                          <i class="ion-ios-people" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Attendees</span>
+                    </div>
+                </div>
+                <div class="row menu-item" menu-toggle="left" ng-click="navigateTo_menu('app.signUp',2)">
+                    <div class="col-33">
+                        <i class="ion-arrow-graph-up-right" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66">
+                        <span>Startups</span>
+                    </div>
+                </div>
+                <div class="row menu-item" menu-toggle="left" ng-click="navigateTo_menu('app.signUp',3)">
+                    <div class="col-33">
+                        <i class="ion-university" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66">
+                        <span>Students</span>
+                    </div>
+                </div>
+                <div class="row menu-item" menu-toggle="left" ng-click="navigateTo_menu('app.signUp',4)">
+                    <div class="col-33">
+                        <i class="ion-speakerphone" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66">
+                        <span>Press</span>
+                    </div>
+                </div>
+                <div class="row menu-item" menu-toggle="left" ng-click="navigateTo_menu('app.signUp',5)">
+                    <div class="col-33">
+                        <i class="ion-ios-lightbulb" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66">
+                        <span>Exhibitors</span>
+                    </div>
+                </div>
+                <div class="row menu-item" menu-toggle="left" ng-click="navigateTo_menu('app.signUp',6)">
+                    <div class="col-33">
+                       <i class="ion-ios-game-controller-b" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66">
+                        <span>Gamers</span>
+                    </div>
+                </div>
+
+
+
+                <md-subheader class="md-warn" menu-toggle="left" ng-click="navigateTo('app.exhibition')">Exhibition</md-subheader>
+
+
+                
+                <div class="row menu-item" menu-toggle="left" ng-click="navigateTo('app.startup-pavillion')">
+                    <div class="col-33">
+                          <i class="ion-arrow-graph-up-right" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Startup Pavillion</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.app-planet')">
+                    <div class="col-33">
+                          <i class="ion-ipad" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>App Planet</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.kids-world')">
+                    <div class="col-33">
+                          <i class="ion-ios-football-outline" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Kids</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.general')">
+                    <div class="col-33">
+                          <i class="ion-laptop" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>General</span>
+                    
+                        
+                    </div>
+                </div>
+
+              
+
+                <md-subheader class="md-warn" menu-toggle="left" ng-click="navigateTo('app.conference')">Conference</md-subheader>
+                <div class="row menu-item"  menu-toggle="left" ng-click="speakers()">
+                    <div class="col-33">
+                          <i class="ion-person-stalker" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Speakers</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="Reglink('http://techplus.com.ng/agenda-2/')">
+                    <div class="col-33">
+                         <i class="ion-clipboard" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Agenda</span>
+                    </div>
+                </div>
+                <!-- <div class="row menu-item"  menu-toggle="left" ng-click="">
+                    <div class="col-33">
+                          <i class="ion-speakerphone" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Tracks</span>
+                    </div>
+                </div> -->
+
+
+
+                
+
+                <md-subheader class="md-warn" menu-toggle="left" ng-click="navigateTo('app.events')">Events</md-subheader>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.government-tech')">
+                    <div class="col-33">
+                          <i class="ion-ios-cog" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Government Technology Forum</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.women-in-tech')">
+                    <div class="col-33">
+                          <i class="ion-woman" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Women in Tech</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.gaming')">
+                    <div class="col-33">
+                          <i class="ion-ios-game-controller-b" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Gaming</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.market-tech')">
+                    <div class="col-33">
+                          <i class="ion-ios-people" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Market Technology Forum</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.c-suite')">
+                    <div class="col-33">
+                          <i class="ion-ios-briefcase" style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>C-Suite</span>
+                    </div>
+                </div>
+                <div class="row menu-item"  menu-toggle="left" ng-click="navigateTo('app.hackaton')">
+                    <div class="col-33">
+                          <i class="ion-code-working"  style="color:#D31A0F"></i>
+                    </div>
+                    <div class="col-66" >
+                        <span>Hackaton</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!--If device is not Android application will present below code.-->
+            <!--It will show animation when selecting row.-->
+            <md-list ng-if="!isAndroid">
+                <md-subheader class="md-warn" ng-click="navigateTo('app.tryAppNoBackBtn')">Home</md-subheader>
+                <md-subheader class="md-warn" ng-click="navigateTo('app.menuDashboard')">Dashboard</md-subheader>
+                <md-subheader class="md-warn" ng-click="navigateTo('app.about-us')">About</md-subheader>
+                <md-subheader class="md-warn" ng-click="navigateTo('app.contractUs')">Contact</md-subheader>
+
+                <md-subheader class="md-warn" ng-click="navigateTo('app.registration')" >Registration</md-subheader>
+                <md-list-item class="menu-list-item" ng-click="navigateTo_menu('app.signUp',1)">
+                    <i class="ion-ios-people" style="color:#D31A0F"></i>
+                    <span>Attendees</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo_menu('app.signUp',2)">
+                    <i class="ion-arrow-graph-up-right" style="color:#D31A0F"></i>
+                    <span>Startups</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo_menu('app.signUp',3)">
+                    <i class="ion-ios-football-outline" style="color:#D31A0F"></i>
+                    <span>Kids</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo_menu('app.signUp',4)">
+                    <i class="ion-speakerphone" style="color:#D31A0F"></i>
+                    <span>Press</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo_menu('app.signUp',5)">
+                    <i class="ion-ios-lightbulb" style="color:#D31A0F"></i>
+                    <span>Exhibitors</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo_menu('app.signUp',6)">
+                    <i class="ion-ios-game-controller-b" style="color:#D31A0F"></i>
+                    <span>Gamers</span>
+                </md-list-item>
+
+                <md-subheader class="md-warn" ng-click="navigateTo('app.exhibition')">Exhibition</md-subheader>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.startup-pavillion')">
+                    <i class="ion-arrow-graph-up-right" style="color:#D31A0F"></i>
+                    <span>Startup Pavillion</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.app-planet')">
+                    <i class="ion-ipad" style="color:#e91e63"></i>
+                    <span>App Planet</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.kids-world')">
+                    <i class="ion-ios-football-outline" style="color:#D31A0F"></i>
+                    <span>Kids</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.general')">
+                     <i class="ion-laptop" style="color:#D31A0F"></i>
+                    <span>General</span>
+                </md-list-item>
+
+
+                <md-subheader class="md-warn" ng-click="navigateTo('app.conference')">Conference</md-subheader>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.speakers-page')">
+                     <i class="ion-person-stalker" style="color:#D31A0F"></i>
+
+                    <span>Speakers</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="Reglink('http://techplus.com.ng/agenda-2/')">
+                    <i class="ion-clipboard" style="color:#D31A0F"></i>
+                    <span>Agenda</span>
+                </md-list-item>
+                <!-- <md-list-item class="menu-list-item" ng-click="">
+                    <i class="ion-speakerphone" style="color:#D31A0F"></i>
+                    <span>Tracks</span>
+                </md-list-item> -->
+
+
+                <md-subheader class="md-warn" ng-click="navigateTo('app.events')">Events</md-subheader>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.government-tech')">
+                     <i class="ion-ios-cog" style="color:#D31A0F"></i>
+
+                    <span>Government Technology Forum</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.women-in-tech')">
+                    <i class="ion-woman" style="color:#D31A0F"></i>
+
+                    <span>Women in Tech</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.gaming')">
+                    <i class="ion-ios-game-controller-b" style="color:#D31A0F"></i>
+
+                    <span>Gaming</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.market-tech')">
+                   <i class="ion-ios-people" style="color:#D31A0F"></i>
+
+                    <span>Market Technology Forum</span>
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.c-suite')">
+                    <i class="ion-ios-briefcase" style="color:#D31A0F"></i>
+
+                    <span>C-Suite</span> 
+                </md-list-item>
+                <md-list-item class="menu-list-item" ng-click="navigateTo('app.hackaton')">
+                    <i class="ion-code-working"  style="color:#D31A0F"></i>
+
+                    <span>Hackaton</span>
+                </md-list-item>
+            </md-list>
+            <!--end list section-->
+        </ion-content><!--end menu content section-->
+        <!--end menu section-->
+
+   <ion-side-menu >
+</ion-side-menus>

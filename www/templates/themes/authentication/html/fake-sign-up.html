@@ -1,0 +1,139 @@
+<!--View Information-->
+<!--View name : Fake Sign Up-->
+<!--State name : app.fakeSignUp-->
+<!--URL : #app/fakeSignUp-->
+
+<ion-view title="Registration Form">
+    <!--left button on navigation bar-->
+    <ion-nav-buttons side="left">
+        <a ng-click="$ionicGoBack()" class="button back-button buttons button-clear header-item nav-back-btn">
+            <i class="ion-android-arrow-back"></i>
+        </a>
+    </ion-nav-buttons><!--end left button on navigation bar-->
+
+    <!--social sign up section-->
+
+    <ion-content   >
+    <ion-item style="text-align:center;width:100%"> {{Type}}</ion-item>
+        <!-- <div class="app-icon">
+            <img src="img/app_icon.png" class="md-card-image">
+        </div> -->
+        <!--input section-->
+
+        <section id="social-sign-up-content" style="margin-top:20px">
+        <form  name="myform" ng-submit="register2(user)" novalidate ng-controller='regCtrl2'>
+        <md-input-container md-no-float="" ng-show='viewName' ng-required="true">
+            <div>
+                <input class="user-name" placeholder="Name" name="fname" ng-model="user.fname" ng-required="true">
+            </div>
+        </md-input-container>
+         
+        <md-input-container md-no-float="" ng-show='viewLastname'>
+            <div>
+                <input class="user-name" placeholder="Lastname" name="lname" ng-model="user.lname" ng-required="true">
+            </div>
+        </md-input-container>
+
+        <md-input-container md-no-float="" ng-show='viewEmail'>
+            <div>
+                <input type="email" class="user-name" placeholder="Email" name="email" ng-model="user.email" ng-required="true">
+            </div>
+        </md-input-container>
+
+        <md-input-container md-no-float="" >
+            <!-- <div>
+                <input type="email" class="user-name" placeholder="Confirm Email" name="confirmEmail" ng-model="user.confirmEmail" ng-required="true">
+            </div> -->
+           
+        </md-input-container>
+
+       <!--  <md-input-container md-no-float="" ng-show='viewConfirmEmail'>
+            <div>
+                <input type="email" class="user-name" placeholder="Confirm Email" name="confirmEmail" ng-model="user.confirmEmail" ng-required="true">
+            </div>
+        </md-input-container> -->
+
+        <md-input-container md-no-float="" ng-show='viewPhone'>
+            <div>
+                <input class="user-name" type="number" placeholder="Phone Number" name="phone" ng-model="user.phone" ng-required="true">
+            </div>
+        </md-input-container>
+
+        <md-input-container md-no-float="" ng-show='viewState'>
+            <div>
+                <input class="user-name" placeholder="State" ng-model="user.state" ng-required="true">
+            </div>
+        </md-input-container>
+
+        <md-input-container md-no-float="" ng-show='viewCountry'>
+            <div>
+                <input class="user-name" placeholder="Country" ng-model="user.country" ng-required="true">
+            </div>
+        </md-input-container>
+
+        <md-input-container md-no-float="" ng-show='viewCompany'>
+            <div>
+                <input class="user-name" placeholder="Company" name="company" ng-model="user.company" ng-required="true">
+            </div>
+        </md-input-container>
+        <md-input-container md-no-float="" ng-show='viewSector'>
+            <div>
+                <input class="user-name" placeholder="Sector" ng-model="user.sector" ng-required="true">
+            </div>
+        </md-input-container>
+
+        <md-input-container md-no-float="" ng-show='viewBoothStand'>
+            
+            <select  class="user-name" ng-model="user.booth_stand" ng-required="true">
+                            <option value="">Select a Booth Stand</option>
+                           <option  value="StartUp"  >
+                            StartUp
+                          </option>
+                          <option  value="Large"  >
+                            Large
+                          </option>
+                          <option  value="Medium"  >
+                            Medium
+                          </option>
+                          <option  value="Small"  >
+                            Small
+                          </option>
+                   </select>
+        </md-input-container>
+
+        <md-input-container md-no-float="" ng-show='viewGameType'>
+            
+            <select  class="user-name" ng-model="user.game_type" ng-required="true">
+                            <option value="">Select Game</option>
+                           <option  value="Call of Duty"  >
+                            Call of Duty
+                          </option>
+                          <option  value="FIFA 16"  >
+                            FIFA 16
+                          </option>
+                          <option  value="Mortal Kombat X"  >
+                            Mortal Kombat X
+                          </option>
+                          
+                   </select>
+        </md-input-container>
+
+        <md-input-container md-no-float="" ng-show='viewOccupation' >
+            <div>
+                <input class="user-name" placeholder="Occupation" ng-model="user.occupation" ng-required="true">
+            </div>
+        </md-input-container>
+
+        <md-input-container class=" social-button md-button md-default-theme material-background"  ng-click="register2(user)" ng-disabled="myForm.$invalid">Submit</md-input-container>
+    </form>
+        
+        <!-- <md-checkbox aria-label="CheckboxTerms">
+            I accept terms and conditions.
+        </md-checkbox> -->
+        <!--end input section-->
+        <!-- <p  class="md-raised social-button md-button md-default-theme material-background" ng-click="register()">
+            Submit
+        </p> -->
+</section>
+    </ion-content><!--end social sign up section-->
+</ion-view>

@@ -1,0 +1,102 @@
+<!--View Information-->
+<!--View name : Menu Dashboard-->
+<!--Controller name : menuDashboardCtrl-->
+<!--Controller path : www/templates/themes/menu-dashboard/js/controllers.js-->
+<!--State name : app.menuDashboard-->
+<!--URL : #app/menuDashboard-->
+
+<ion-view title="Conference">
+    <!--menu dashboard section-->
+    <ion-content id="menu-dashboard-content">
+    <div style="background-color: #f6f6f6;height:50px;text-align:center;margin-top:25px;color: gray;">
+
+            Please select the appropriate category to view
+       
+    </div>
+        <!--panel section-->
+        <div class="menu-panel">
+            <div class="row">
+                <div class="col-33" ng-click="navigateTo('app.speakers-page')">
+                    <i class="ion-person-stalker" style="color:#e91e63"></i>
+
+                    <p>Speakers</p>
+                </div>
+                <div class="col-33" ng-click="Reglink()">
+                    <i class="ion-clipboard" style="color:#e91e63"></i>
+
+                    <p>Agenda</p>
+                </div>
+                <div class="col-33" ng-click="showToast('Camera')">
+                    <i class="ion-speakerphone" style="color:#e91e63"></i>
+
+                    <p>Tracks</p>
+                </div>
+            </div>
+
+            
+
+            
+            </div>
+        </div><!--end panel section-->
+
+        <!--panel footer section-->
+        <div class="menu-dashboard-footer">
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="navigateTo('app.speakers-page')">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-person-stalker" style="color:#e91e63"></i>
+                    </div>
+                    <div class="col-80">
+                       Speakers
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="showToast('Google Connect')">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-social-youtube" style="color:#e91e63"></i>
+                    </div>
+                    <div class="col-80">
+                        Tech Plus 2016 Video
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="showToast('Google Connect')">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-document-text" style="color:#e91e63"></i>
+                    </div>
+                    <div class="col-80">
+                        Tech Plus 2015 Summary
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+            <md-whiteframe class="md-whiteframe-z1" layout ng-click="navigateTo('app.notelist')">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="ion-compose" style="color:#e91e63"></i>
+                    </div>
+                    <div class="col-80">
+                        Notebook
+                    </div>
+                    <div class="col-10">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </md-whiteframe>
+
+        </div><!--end panel footer section-->
+    </ion-content><!--Menu dashboard section-->
+</ion-view>

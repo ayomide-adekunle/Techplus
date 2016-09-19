@@ -1,0 +1,88 @@
+<!--View Information-->
+<!--View name : Menu Dashboard-->
+<!--Controller name : menuDashboardCtrl-->
+<!--Controller path : www/templates/themes/menu-dashboard/js/controllers.js-->
+<!--State name : app.menuDashboard-->
+<!--URL : #app/menuDashboard-->
+
+<ion-view title="Speakers">
+    <!--menu dashboard section-->
+    <ion-content id="menu-dashboard-content">
+     
+    <div >
+        <!--panel section-->
+        
+
+    <div class="list">
+      <div ng-repeat="speakers_info in speakers_infos" >
+
+      <a class="item item-avatar" ng-click="speakers_details('{{speakers_info[0]}}','{{speakers_info[1]}}','{{speakers_info[2]}}')">
+          <img src="{{speakers_info[0]}}" onError="this.onerror=null;this.src='img/logo.png';">
+
+          <h2 style="margin-top:10px;">{{speakers_info[1]}}</h2>
+          
+        </a>
+
+      </div>
+
+        <!-- <a class="item item-avatar" ng-click="Speaker_info('juan')">
+          <img src="http://techplus.com.ng/app_images/Professor-Juan-Enric-Ricart.jpg">
+          <h2>Prof. Juan Enric Ricart</h2>
+          <p>Fellow of the SMS and EURAM</p>
+        </a>
+
+        <a class="item item-avatar" ng-click="Speaker_info('josep')">
+          <img src="http://techplus.com.ng/app_images/Josep-Ramon-Ferrer.jpg">
+          <h2>Josep Ramon Ferrer</h2>
+          <p>Engineer in Telecoms and engineer in Electronics</p>
+        </a>
+
+       
+        <a class="item item-avatar" ng-click="Speaker_info('rodney')"> 
+          <img src="http://techplus.com.ng/app_images/Rodney-Williams.jpg">
+          <h2>Rodney Williams</h2>
+          <p>Founder/CEO of LISNR</p>
+        </a>
+
+        
+         <a class="item item-avatar" ng-click="#">
+
+          <img src="http://techplus.com.ng/app_images/omobola-johnson.jpg">
+          <h2>Omobola Johnson</h2>
+         
+        </a>
+
+      
+        <a class="item item-avatar" ng-click="#">
+          <img src="http://techplus.com.ng/app_images/Karthik-Noornie.jpg">
+          <h2>Karthik Noornie</h2>
+          <p></p>
+        </a>
+
+        <a class="item item-avatar" ng-click="Speaker_info('monique')">
+          <img src="http://techplus.com.ng/app_images/Monique-Woodard.jpg">
+          <h2>Monique Woodard</h2>
+          <p>Venture Partner at 500 Startups</p>
+        </a>
+
+        <a class="item item-avatar" ng-click="Speaker_info('kamran')">
+          <img src="http://techplus.com.ng/app_images/Kamran-Elahain.jpg">
+          <h2>Kamran Elahain</h2>
+          <p>Chairman  BIT-AMENA</p>
+        </a>
+
+        <a class="item item-avatar" ng-click="Speaker_info('tony')">
+          <img src="http://techplus.com.ng/app_images/Tony-Scott.jpg">
+          <h2>Tony Scott</h2>
+          <p>U.S. Chief Information Officer</p>
+          <p>White House Office of Management and Budget</p>
+        </a> -->
+
+    </div>
+
+
+       
+        <!--panel footer section-->
+        
+    </ion-content><!--Menu dashboard section-->
+</ion-view>

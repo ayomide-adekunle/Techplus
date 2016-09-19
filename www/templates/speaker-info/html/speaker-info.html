@@ -1,0 +1,55 @@
+<!--View Information-->
+<!--View name : NEWS Feed-->
+<!--State name : app.newsFeed-->
+<!--URL : #app/newsFeed-->
+
+<ion-view title="Speakers">
+    <!--news feed section-->
+    <ion-content id="news-feed-content">
+        <img src="{{speaker_pic}}" style="height:280px;width:350px;margin-left:auto;margin-right:auto;display:block" onError="this.onerror=null;this.src='img/logo.png';">
+        <div style="text-align:center;background-color:#D31A0F;color:white">{{speaker_title}}</div>
+
+        <div class="news-item">
+
+            <!--header section-->
+            
+        
+            <!--detail section-->
+            <div class="row detail">
+                <div class="col">
+                    
+
+                    <!-- <p >
+                      {{info1}}
+                    </p> -->
+                    <span>
+                        {{info1}}
+                    
+                    <a style="color:blue" ng-show='more' ng-click='show_more()'>Read more...</a>
+                    </span>
+                    <sapn ng-show='less'>
+                      {{info2}} 
+                      <a style="color:blue" ng-click='show_less()'> Read less...</a>
+                    </span>
+                    
+
+                    
+                </div>
+            </div><!--end detail section-->
+
+            <!--footer section-->
+           
+        </div>
+
+        
+        
+        <div class="row"></div>
+    </ion-content><!--end news feed section-->
+
+    <!--button section-->
+   <!--  <div class="footer-fab-bar">
+        <a class="md-button md-accent md-fab fab-footer" aria-label="Add">
+            <i class="ion ion-plus"></i>
+        </a>
+    </div><!--end button section-->
+</ion-view>
